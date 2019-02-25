@@ -1,0 +1,23 @@
+{
+  "author_info": {},
+  "color_options": {
+    "type": {
+      "color_map": [],
+      "key": "type",
+      "legendTitle": "Plasmid",
+      "menuItem": "Plasmid",
+      "type": "discrete"
+    }
+  },
+  "geo": {},
+  "maintainer": [
+    "Richard Neher",
+    "http://bedford.io/team/trevor-bedford/"
+  ],
+  "panels": [
+    "tree"
+  ],
+  "title": "GNOME like evolution",
+  "updated": "25 Feb 2019",
+  "virus_count": 811
+}
