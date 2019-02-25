@@ -1,0 +1,52 @@
+rule all:
+    input:
+        auspice_tree = "auspice/GNOME_tree.json",
+        auspice_meta = "auspice/GNOME_meta.json"
+
+metadata = "metadata.tsv"
+colors = "config/colors.tsv",
+auspice_config = "config/auspice_config.json"
+
+
+rule refine:
+    message:
+        """
+        Refining tree
+        """
+    input:
+        # tree = rules.tree.output.tree,
+        tree = "dist_tree.nwk",
+        metadata = "metadata.tsv"
+    output:
+        tree = "results/tree.nwk",
+        node_data = "results/branch_lengths.json"
+    shell:
+        """
+        augur refine \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --output-tree {output.tree} \
+            --output-node-data {output.node_data}
+        """
+
+rule export:
+    message: "Exporting data files for for auspice"
+    input:
+        tree = rules.refine.output.tree,
+        metadata = metadata,
+        branch_lengths = rules.refine.output.node_data,
+        colors = colors,
+        auspice_config = auspice_config
+    output:
+        auspice_tree = rules.all.input.auspice_tree,
+        auspice_meta = rules.all.input.auspice_meta
+    shell:
+        """
+        augur export \
+            --tree {input.tree} \
+            --metadata {input.metadata} \
+            --node-data {input.branch_lengths} \
+            --auspice-config {input.auspice_config} \
+            --output-tree {output.auspice_tree} \
+            --output-meta {output.auspice_meta}
+        """
