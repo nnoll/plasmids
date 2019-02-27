@@ -1,11 +1,20 @@
 {
   "author_info": {},
   "color_options": {
-    "type": {
-      "color_map": [],
-      "key": "type",
-      "legendTitle": "Plasmid",
-      "menuItem": "Plasmid",
+    "plasmidType": {
+      "color_map": [
+        [
+          "ours",
+          "#511EA8"
+        ],
+        [
+          "other",
+          "#4928B4"
+        ]
+      ],
+      "key": "plasmidType",
+      "legendTitle": "plasmidType",
+      "menuItem": "plasmidType",
       "type": "discrete"
     }
   },
@@ -18,6 +27,6 @@
     "tree"
   ],
   "title": "GNOME like evolution",
-  "updated": "25 Feb 2019",
+  "updated": "27 Feb 2019",
   "virus_count": 811
 }
