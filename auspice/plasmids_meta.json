@@ -1,32 +1,56 @@
 {
   "author_info": {},
   "color_options": {
-    "plasmidType": {
+    "gene": {
       "color_map": [
         [
-          "ours",
+          "ctxm",
           "#511EA8"
         ],
         [
-          "other",
+          "kpc",
           "#4928B4"
+        ],
+        [
+          "ndm",
+          "#4334BF"
+        ],
+        [
+          "oxa48",
+          "#3F50CC"
+        ],
+        [
+          "shv11",
+          "#3F5ED0"
+        ],
+        [
+          "tem1",
+          "#416CCE"
+        ],
+        [
+          "vim",
+          "#4379CD"
+        ],
+        [
+          "outgroup",
+          "#4784C7"
         ]
       ],
-      "key": "plasmidType",
-      "legendTitle": "plasmidType",
-      "menuItem": "plasmidType",
+      "key": "gene",
+      "legendTitle": "gene",
+      "menuItem": "gene",
       "type": "discrete"
     }
   },
   "geo": {},
   "maintainer": [
-    "Richard Neher",
-    "http://bedford.io/team/trevor-bedford/"
+    "Nicholas Noll",
+    "http://nicholasnoll.com"
   ],
   "panels": [
     "tree"
   ],
-  "title": "GNOME like evolution",
-  "updated": "27 Feb 2019",
-  "virus_count": 811
+  "title": "Plasmid evolution",
+  "updated": "28 Feb 2019",
+  "virus_count": 1675
 }
